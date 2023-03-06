@@ -151,45 +151,39 @@ function myFunction() {
 
     var imgData;
 
-    // getImageData(imgUrl, function(dataUrl) {
-    //     // set the image data to the loaded data URL
-    //     imgData = dataUrl;
-      
-    //     // add the image to the document
-    //     doc.addImage(imgData, 'JPEG', 10, 10, 50, 50);
-      
-    //     // add text to the document
-    //     doc.text(z, 70, 30);
-      
-    //     // save the document
-    //    // doc.save('mydocument.pdf');
-    //     doc.save("Holiday-socho-ai.pdf");
-    //   });
-
-
-     //----------------------------
-    //  function getImageData(url, callback) {
-    //     var img = new Image();
-    //     img.onload = function() {
-    //       var canvas = document.createElement('canvas');
-    //       canvas.width = this.naturalWidth;
-    //       canvas.height = this.naturalHeight;
-    //       canvas.getContext('2d').drawImage(this, 0, 0);
-    //       var dataUrl = canvas.toDataURL('image/jpeg');
-    //       callback(dataUrl);
-    //     };
-    //     img.src = url;
+    
 
     ////---------------------------- HAMARE YAHA IMAGE ADD KIYA ZATA HAI ---> QRIPYA SAMPARK KARE :) --------> ENDS
 
    doc.save("Holiday-socho-ai.pdf");
 
 
-
-
-
     // ------------------------------->HUM RUN BUTTON KA END HAI<----------------DON'T TOUCH ME :() 
   }
 
 
+   function load_animation(){
+
+    const playButton = document.getElementById('submit_button');
+//const playButton = document.getElementById('play-button');  --> For Button Wala
+const gifContainer = document.getElementById('gif-container');
+
+
+
+playButton.addEventListener('click', () => {
+  const gifImage = document.createElement('img');
+  gifImage.src = 'GIF_White.gif';
+  //gifImage.src = 'GIF_Transparent';
+  //
+  gifContainer.appendChild(gifImage);
+  gifContainer.style.display = 'block';
+  setTimeout(() => {
+    gifContainer.removeChild(gifImage);
+    gifContainer.style.display = 'none';
+  }, 6000);
+});
+    
+      
+    }
+   
 
